@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { FaNewspaper, FaUserGear } from "react-icons/fa6";
-import { BiSolidBookContent } from "react-icons/bi";
-import { AiFillPieChart, AiFillYoutube } from "react-icons/ai";
+import { BiSolidDashboard } from "react-icons/bi";
+import { AiFillPieChart } from "react-icons/ai";
+import { GoCommentDiscussion } from "react-icons/go";
 import { SiPlausibleanalytics } from "react-icons/si";
+
 
 import { usePathname } from "next/navigation";
 
@@ -19,36 +21,36 @@ export default function Navbar() {
                             <SiPlausibleanalytics className={pathName == "/" ? "text-4xl text-white opacity-100 hover:opacity-50 transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"} />
                     </Link>
                 </div>
-                <div className="flex flex-col items-center gap-16 justify-center">
-                    <Link href="/webnews">
+                <div className="flex flex-col items-center gap-12 justify-center">
+                    <Link href="/dashboard">
 
-                    <div className={pathName == "/webnews" ? "bg-[#F5F6FD] p-2 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
-                        <BiSolidBookContent className={pathName == "/webnews" ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
+                    <div className={pathName.includes("/dashboard") ? "bg-[#F5F6FD] p-4 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
+                        <BiSolidDashboard className={pathName.includes("/dashboard") ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
                     </div>
                     </Link>
-                    <Link href="/youtube">
+                    <Link href="/discussion">
 
-                    <div className={pathName == "/youtube" ? "bg-[#F5F6FD] p-2 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
-                        <AiFillYoutube className={pathName == "/youtube" ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
+                    <div className={pathName.includes("/discussion") ? "bg-[#F5F6FD] p-4 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
+                        <GoCommentDiscussion className={pathName.includes("/discussion") ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
                     </div>
                     </Link>
-                    <Link href="/newspaper">
+                    <Link href="/media">
 
-                    <div className={pathName == "/newspaper" ? "bg-[#F5F6FD] p-2 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
-                        <FaNewspaper className={pathName == "/newspaper" ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
+                    <div className={pathName.includes("/media") ? "bg-[#F5F6FD] p-4 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
+                        <FaNewspaper className={pathName.includes("/media") ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
                     </div>
                     </Link>
                     <Link href="/analysis">
 
-                    <div className={pathName == "/analysis" ? "bg-[#F5F6FD] p-2 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
-                        <AiFillPieChart className={pathName == "/analysis" ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
+                    <div className={pathName.includes("/analysis") ? "bg-[#F5F6FD] p-4 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
+                        <AiFillPieChart className={pathName.includes("/analysis") ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
                     </div>
                     </Link>
                 </div>
                 <div className="pb-8">
                     <Link href="/profile">
-                    <div className={pathName == "/profile" ? "bg-[#F5F6FD] p-2 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
-                        <FaUserGear className={pathName == "/profile" ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
+                    <div className={pathName.includes("/profile") ? "bg-[#F5F6FD] p-4 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
+                        <FaUserGear className={pathName.includes("/profile") ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
                     </div>
                     </Link>
                 </div>

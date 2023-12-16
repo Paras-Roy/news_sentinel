@@ -1,4 +1,4 @@
-import FeedContainer from "../components/webnews/FeedContainer"
+import FeedContainer from "../components/media/FeedContainer"
 import SideBar from "../components/sidebar/SideBar"
 
 export default function Page() {

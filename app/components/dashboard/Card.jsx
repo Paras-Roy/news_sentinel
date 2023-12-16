@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import ButtonNormal from '../buttons/ButtonNormal';
+import Link from 'next/link';
 
-export default function Card({ article }) {
-  const data = article;
+export default function Card({ nudge }) {
+  const data = nudge;
 
   // Define styles for the sentiment bar
   const getSentimentBarStyles = () => {
@@ -34,22 +35,22 @@ export default function Card({ article }) {
 
   return (
     <>
-      <div className='flex flex-col bg-[#f5f6fd] rounded-xl shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] w-5/12 p-6 m-8'>
+      <div className='flex flex-col bg-[#f5f6fd] shadow-md rounded-xl w-4/12 gap-4 p-6 m-8'>
         <div className='flex flex-row justify-between'>
           <div className='flex'>
-            <Image src={data.channel_logo} alt={data.channel_name} width={50} height={50} style={{ borderRadius: '50%' }} />
-            <div className='flex flex-col font-bold ml-4'>
-              {data.channel_name}
-              <div className='text-sm font-medium text-gray-500'>{data.date}</div>
+            <div className='flex flex-col font-bold'>
+              {data.category}
+              <div className='text-sm font-bold text-gray-500'>{data.date}</div>
             </div>
           </div>
-            <ButtonNormal title='Watch Video' />
+          <Link href={`/dashboard/${data.id}`}>
+          <ButtonNormal title='Open' />
+          </Link>
         </div>
         <div className='flex flex-col mt-4'>
           <div className='text-xl'>{data.title}</div>
         </div>
-        <div className='flex flex-col mt-4'>
-          <Image src={data.photo} alt={data.title} width={500} height={300} className='shadow-lg' style={{ borderRadius: '12px' }} />
+        {/* <div className='flex flex-col mt-4'>
           <div className='flex flex-row gap-4 items-center mt-4'>
             <div
               className='text-md font-bold mr-2'
@@ -64,7 +65,7 @@ export default function Card({ article }) {
               ></div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

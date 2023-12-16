@@ -1,8 +1,8 @@
 import SideBar from "../components/sidebar/SideBar"
-import FeedContainer from "../components/youtube/FeedContainer"
+import FeedContainer from "../components/dashboard/FeedContainer"
 
 
-export default function Page() {
+export default async function Page() {
   const topSources = [
     {
       id: 1,
