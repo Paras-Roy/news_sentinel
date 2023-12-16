@@ -108,8 +108,8 @@ export default function FeedContainer() {
         {
           posts.map((post) => {
             return (
-              <Link href={`/discussion/${post.id}`}>
-              <Card key={post.id} post={post} />
+              <Link key={post.id} href={`/discussion/${post.id}`}>
+              <Card post={post} />
               </Link>
             )
           }
