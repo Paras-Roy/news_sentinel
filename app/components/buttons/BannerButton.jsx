@@ -6,7 +6,7 @@ export default function ButtonNormal(props) {
     const onClick = props.onClick
     const backgroundColor = props.color || '#3426ae'
     return (
-        <span className="font-semibold text-sm text-white flex py-3 justify-center gap-0 shadow-md cursor-pointer items-center rounded-full transition-all hover:brightness-125"
+        <span onClick={onClick} className="font-semibold text-sm text-white flex py-3 justify-center gap-0 shadow-md cursor-pointer items-center rounded-full transition-all hover:brightness-125"
               style={{ backgroundColor }}
         >
             {title}

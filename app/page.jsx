@@ -42,7 +42,7 @@ export default function Home() {
         <div className="flex flex-col tran items-center min-h-screen w-full" style={{ backgroundImage: 'url(home-main.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="text-center">
             <h1 className="text-7xl mt-32 font-bold bg-clip-text text-transparent bg-gradient-to-b from-green-700 to-green-800">Monitor Success of Nudges.</h1>
-            <p className="mt-4 text-xl text-black">AI powered analysis of trends and feedback of environmental indicators.</p>
+            {/* <p className="mt-4 text-xl text-black">AI powered analysis of trends and feedback of environmental indicators.</p> */}
           </div>
         </div>
       </main>

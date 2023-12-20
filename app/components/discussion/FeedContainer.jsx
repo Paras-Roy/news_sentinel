@@ -12,6 +12,7 @@ export default function FeedContainer() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [modal, setModal] = useState(false);
+  
   const toggleModal = () => {
     setModal(!modal);
   }
@@ -41,8 +42,8 @@ export default function FeedContainer() {
             <div className='bg-white flex flex-col gap-6 w-1/2 h-3/4 rounded-xl p-12'>
               <div className='text-3xl font-medium text-[#888]'>Create Post</div>
               <div className='flex flex-1 flex-col gap-4 mt-4'>
-                <input type='text' className='border-2 text-lg border-[#e5e5e5] rounded-xl p-4' onChange={(e) => setTitle(e.target.value)} value={title} placeholder='Title' />
-                <textarea className='border-2 border-[#e5e5e5] rounded-xl p-4 flex-1'onChange={(e) => setContent(e.target.value)} value={content} placeholder='Content' />
+                <input type='text' className='border-2 text-lg border-[#e5e5e5] rounded-xl p-4' onChange={(e) => setTitle(e.target.value)} value={title} placeholder='Title' required/>
+                <textarea className='border-2 border-[#e5e5e5] rounded-xl p-4 flex-1'onChange={(e) => setContent(e.target.value)} value={content} placeholder='Content' required/>
                 <div className='flex justify-end gap-4'>
                   <div className='rounded-xl p-2 px-4 cursor-pointer flex bg-blue-500 items-center gap-2 text-white hover:brightness-90'>
                     <div onClick={handleCreatePost} className='text-xl font-medium'>Create Post</div>

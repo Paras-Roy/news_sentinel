@@ -40,12 +40,6 @@ export default function Navbar() {
                         <FaNewspaper className={pathName.includes("/media") ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
                     </div>
                     </Link>
-                    <Link href="/analysis">
-
-                    <div className={pathName.includes("/analysis") ? "bg-[#F5F6FD] p-4 rounded-xl border-none shadow-[0_15px_30px_-5px_rgba(0,0,0,0.5)] translate-x-3/4 transition" : "p-2 transition"}>
-                        <AiFillPieChart className={pathName.includes("/analysis") ? "text-4xl text-[#f51711] transition" : "text-4xl text-white opacity-50 hover:opacity-90 transition"}  />
-                    </div>
-                    </Link>
                 </div>
                 <div className="pb-8">
                     <Link href="/profile">
