@@ -1,8 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import GaugeChartComponent from '@/app/components/charts/GaugeChartComponent';
-import BarChartComponent from '../../components/charts/BarChartComponent';
+import BarChartComponent from '@/app/components/charts/BarChartComponent';
 import LineChartComponent from '@/app/components/charts/LineChartComponent';
+import GaugeChartComponent from '@/app/components/charts/GaugeChartComponent';
 
 const generateRandomValue = () => Math.floor(Math.random() * 20);
 
@@ -1118,7 +1118,7 @@ export default function Page() {
                     </div> */}
                     <div className="flex flex-[3] bg-white rounded-2xl p-4">
                         <BarChartComponent
-                            title="Electric Vehicle Sale"
+                            title="Electric Vehicle Sales"
                             index={1}
                             barColor="lightgreen"
                             barThickness={30}
