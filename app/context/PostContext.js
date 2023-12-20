@@ -24,7 +24,7 @@ export const PostProvider = ({ children }) => {
                 ...post,
                 id: docRef.id,
             };
-            setPosts([newPost, ...posts]);
+            getPosts();
         } catch (err) {
             console.error(err);
         }

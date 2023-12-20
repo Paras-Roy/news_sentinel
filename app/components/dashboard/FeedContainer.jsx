@@ -1,7 +1,5 @@
 import Header from './Header'
 import Card from './Card'
-import ButtonLarge from '../buttons/ButtonLarge'
-import ButtonNormal from '../buttons/ButtonNormal'
 import BannerButton from '../buttons/BannerButton'
 
 export default function FeedContainer() {
@@ -12,6 +10,40 @@ export default function FeedContainer() {
       category: 'Waste Management',
       date: '2021-09-09',
       author: 'John Doe',
+      parameters: [
+        {
+          id: 1,
+          title: 'Recycle bin and trash can',
+        },
+        {
+          id: 2,
+          title: 'Proper labelling',
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: 'Using renewable fuel vehicles over fossil fuel powered vehicles',
+      category: 'Sustainable Development',
+      date: '2022-09-09',
+      author: 'Jay Doe',
+      parameters: [
+        {
+          id: 1,
+          title: 'Recycle bin and trash can',
+        },
+        {
+          id: 2,
+          title: 'Proper labelling',
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: 'Companies should adopt right to repair',
+      category: 'E-waste management',
+      date: '2023-09-09',
+      author: 'Jai Dube',
       parameters: [
         {
           id: 1,
@@ -53,7 +85,7 @@ export default function FeedContainer() {
       </div>
 
 
-      <div className='flex-1 flex flex-wrap items-center justify-between'>
+      <div className='flex-1 flex flex-wrap items-center'>
         {
           nudge_data.map((nudge) => {
             return (

@@ -32,7 +32,7 @@ export default async function Page() {
     return (
       <div className="flex gap-3 w-full h-full">
           <FeedContainer/>
-          <SideBar topSources={topSources} dialValue={37}/>
+          {/* <SideBar topSources={topSources} dialValue={37}/> */}
       </div>
     )
 }

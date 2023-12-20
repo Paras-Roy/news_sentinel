@@ -49,7 +49,7 @@ export default function Card({ article }) {
           <div className='text-xl'>{data.title}</div>
         </div>
         <div className='flex flex-col mt-4'>
-          <Image src={data.photo} alt={data.title} width={500} height={300} className='shadow-lg' style={{ borderRadius: '12px' }} />
+          {/* <Image src={data.photo} alt={data.title} width={500} height={300} className='shadow-lg' style={{ borderRadius: '12px' }} /> */}
           <div className='flex flex-row gap-4 items-center mt-4'>
             <div
               className='text-md font-bold mr-2'

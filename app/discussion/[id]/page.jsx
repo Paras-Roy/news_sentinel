@@ -24,7 +24,6 @@ export default function Page({ params: { id } }) {
         }
         await addComment(id, tempComment);
         setComment('');
-        //toast success
     }
 
     const post = posts.find(post => post.id === id);
@@ -43,7 +42,7 @@ export default function Page({ params: { id } }) {
                     </div>
                 </div>
                 {/* title in the center */}
-                <div className='flex rounded-2xl bg-[#f5f6fd] flex-col gap-4 justify-center items-center p-6 m-4'>
+                <div className='flex rounded-2xl  flex-col gap-4 justify-center items-center p-6 m-4'>
                     <div className='text-3xl font-medium text-[#333]'>{post.title}</div>
                     <div className='flex items-center font-medium text-gray-500 text-sm'>
                         <span>{post.author.name}</span>
@@ -52,7 +51,7 @@ export default function Page({ params: { id } }) {
                     </div>
                 </div>
                 {/* content */}
-                <div className='flex border rounded-2xl bg-[#f5f6fd] flex-col justify-center items-center p-6 m-2'>
+                <div className='flex border rounded-2xl bg-[#f5f6fd] flex-col justify-center p-6 m-4'>
                     <div className='text-lg font-medium text-[#333]'>{post.content}</div>
                 </div>
                 {/* comments */}
@@ -60,8 +59,7 @@ export default function Page({ params: { id } }) {
                     {/* add comment box */}
                     <div className='flex flex-col gap-4 justify-center m-2'>
                         <div className='flex flex-col gap-2'>
-                            <div className='text-xl font-medium text-[#333]'>Add Comment</div>
-                            <textarea onChange={(e) => setComment(e.target.value)} value={comment} className='border rounded-xl p-4 text-lg font-medium text-[#333]'></textarea>
+                            <textarea placeholder='Share your thoughts' onChange={(e) => setComment(e.target.value)} value={comment} className='border rounded-xl p-4 text-lg font-medium text-[#333]'></textarea>
                             <div className='flex justify-end'>
                                 <button onClick={handleComment} className='bg-blue-500 hover:bg-blue-600 text-white rounded-xl px-4 py-2'>Add Comment</button>
                             </div>
@@ -73,9 +71,9 @@ export default function Page({ params: { id } }) {
                             post.comments.map((comment, index) => {
                                 return (
                                     <div key={index} className='flex border rounded-xl p-4 flex-col gap-4'>
-                                        <div className='flex font-medium text-gray-400 text-sm'>
+                                        <div className='flex font-medium justify-between text-gray-400 text-sm'>
                                             <span className="text-green-600">{comment.author.name}</span>
-                                            <span className='mx-4'>•</span>
+                                            {/* <span className='mx-4'>•</span> */}
                                             <span>{comment.createdAt.toDate().toLocaleDateString()}</span>
                                         </div>
                                         <div className='text-lg font-medium text-[#333]'>{comment.content}</div>

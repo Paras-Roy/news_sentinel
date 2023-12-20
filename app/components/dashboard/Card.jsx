@@ -35,7 +35,7 @@ export default function Card({ nudge }) {
 
   return (
     <>
-      <div className='flex flex-col bg-[#f5f6fd] shadow-md rounded-xl w-4/12 gap-4 p-6 m-8'>
+      <div className='flex flex-col bg-[#f5f6fd] shadow-md rounded-xl w-3/12 gap-4 p-6 m-8'>
         <div className='flex flex-row justify-between'>
           <div className='flex'>
             <div className='flex flex-col font-bold'>

@@ -1,9 +1,11 @@
+
 import MainContainer from './components/maincontainer/MainContainer'
 import Navbar from './components/navbar/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { AuthProvider } from './context/AuthContext'
 import { PostProvider } from './context/PostContext'
+import Login from './components/login/Login'
 
 const inter = Inter({ subsets: ['latin'] })
 
