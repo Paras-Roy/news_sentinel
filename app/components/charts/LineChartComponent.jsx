@@ -8,7 +8,7 @@ import { CanvasRenderer } from 'echarts/renderers';
 
 echarts.use([GridComponent, LineChart, CanvasRenderer, UniversalTransition]);
 
-const LineChartComponent = ({ title, index, data, xAxisData, lineColor, lineThickness }) => {
+export default function LineChartComponent ({ title, index, data, xAxisData, lineColor, lineThickness }) {
   useEffect(() => {
     const chartDom = document.getElementById(`main${index}`);
     const myChart = echarts.init(chartDom);
@@ -77,5 +77,3 @@ const LineChartComponent = ({ title, index, data, xAxisData, lineColor, lineThic
     </div>
   );
 };
-
-export default LineChartComponent;

@@ -6,7 +6,7 @@ import { CanvasRenderer } from 'echarts/renderers';
 
 echarts.use([GaugeChart, CanvasRenderer]);
 
-const GaugeChartComponent = ({ data, title }) => {
+export default function GaugeChartComponent  ({ data, title }) {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -85,4 +85,3 @@ const GaugeChartComponent = ({ data, title }) => {
   );
 };
 
-export default GaugeChartComponent;

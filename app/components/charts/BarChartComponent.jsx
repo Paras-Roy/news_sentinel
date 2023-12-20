@@ -7,7 +7,7 @@ import { CanvasRenderer } from 'echarts/renderers';
 
 echarts.use([GridComponent, BarChart, CanvasRenderer]);
 
-const BarChartComponent = ({ title, index, barColor, barThickness, barData, xAxisData }) => {
+export default function BarChartComponent ({ title, index, barColor, barThickness, barData, xAxisData }) {
   useEffect(() => {
     const chartDom = document.getElementById(`main${index}`);
     const myChart = echarts.init(chartDom);
@@ -72,5 +72,3 @@ const BarChartComponent = ({ title, index, barColor, barThickness, barData, xAxi
     <div id={`main${index}`} className='w-full h-full rounded-2xl' />
   </div>);
 };
-
-export default BarChartComponent;
