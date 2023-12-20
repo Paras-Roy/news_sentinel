@@ -83,7 +83,7 @@ export default function FeedContainer() {
                 {!parametersFound && <button onClick = {findParameters} className='border-2 text-lg border-[#e5e5e5] rounded-xl p-4'>Find Parameters</button>}
                 {parametersFound && <div className='flex justify-end gap-4'>
                   {/* partameter properties */}
-                  <div className='flex flex-col gap-2 mt-4'>
+                  <div className='flex flex-col justify-center items-center gap-2 mt-4'>
                     {parameters}
                     </div>
 
