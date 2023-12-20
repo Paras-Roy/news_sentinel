@@ -37,7 +37,7 @@ export default function Page() {
       {user?<><div>Profile of {user.email} </div><div onClick={logout}>Logout</div></>:<div onClick={login}>Login</div>}
       <button onClick = {handleGetCategories}
       >Click Me</button>
-      {categories}
+      <div>{categories}</div>
     </div>
   )
 }
