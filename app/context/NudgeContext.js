@@ -3,7 +3,6 @@
 import { useContext, createContext, useState, useEffect } from "react"
 import {collection, getDocs, addDoc, getDoc, updateDoc, doc, deleteDoc} from "firebase/firestore"
 import {db} from "../firebase"
-import { use } from "echarts"
 
 const NudgeContext = createContext()
 
@@ -17,7 +16,6 @@ export const NudgeProvider = ({ children }) => {
         });
         setNudges(tempDoc);
     }
-
     const saveNudge = async (nudge) => {
         try {
             const docRef = await addDoc(collection(db, "nudges"), nudge);

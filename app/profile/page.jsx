@@ -3,10 +3,12 @@
 import React from 'react'
 import { UseAuth } from '../context/AuthContext'
 import { getCategories } from '../utils/nlp';
+import { UsePost } from '../context/PostContext';
 
 export default function Page() {
   const {user, signInGoogle, signOutGoogle} = UseAuth();
   const [categories, setCategories] = React.useState("")
+  const {uploadParameters} = UsePost();
   const login = async () => {
     try {
       await signInGoogle()
@@ -38,6 +40,7 @@ export default function Page() {
       <button onClick = {handleGetCategories}
       >Click Me</button>
       <div>{categories}</div>
+      <button onClick = {uploadParameters}>Upload</button>
     </div>
   )
 }

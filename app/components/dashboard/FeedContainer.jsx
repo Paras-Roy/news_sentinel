@@ -29,7 +29,6 @@ export default function FeedContainer() {
 
   const findParameters = async() => {
     const result = await getCategories(title);
-    console.log(result);
     setParameters(result);
     setParametersFound(true);
   }
@@ -52,6 +51,7 @@ export default function FeedContainer() {
     toggleModal();
     setParametersFound(false);
   }
+
   const nudge_data = [
     {
       id: 1,
@@ -77,13 +77,20 @@ export default function FeedContainer() {
         modal && (
           <div className='fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center'>
             <div className='bg-white flex flex-col gap-6 w-1/2 h-3/4 rounded-xl p-12'>
-              <div className='text-3xl font-medium text-[#888]'>Create Nudge</div>
+              <div className='text-3xl font-medium text-[#888]'>Define parameters</div>
               <div className='flex flex-1 flex-col gap-4 mt-4'>
                 <input type='text' className='border-2 text-lg border-[#e5e5e5] rounded-xl p-4' onChange={(e) => setTitle(e.target.value)} value={title} placeholder='Nudge Title' required/>
                 {!parametersFound && <button onClick = {findParameters} className='border-2 text-lg border-[#e5e5e5] rounded-xl p-4'>Find Parameters</button>}
                 {parametersFound && <div className='flex justify-end gap-4'>
-                  <div className=''>{parameters}</div>
+                  {/* partameter properties */}
+                  <div className='flex flex-col gap-2 mt-4'>
+                    {parameters}
+                    </div>
+
                 </div>}
+                <div onClick={toggleModal} className='rounded-xl p-2 px-4 cursor-pointer flex bg-red-500 items-center gap-2 text-white hover:brightness-90'>
+                    <div className='text-xl font-medium'>Cancel</div>
+                  </div>
               </div>
             </div>
           </div>
@@ -106,7 +113,7 @@ export default function FeedContainer() {
           Monitor a New Nudge With Our Wide Range of Parameters
         </div>
         <div className="max-w-[150px]">
-          <BannerButton onClick={toggleModal} color="#05285b" title='Create Now' />
+          <BannerButton onClick={toggleModal} color="#05285b" title='Define parameters' />
         </div>
       </div>
 
